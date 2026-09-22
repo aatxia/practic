@@ -1,0 +1,173 @@
+{
+  "classes": [
+    "А",
+    "Б",
+    "В",
+    "Г",
+    "Д",
+    "Е",
+    "Ж",
+    "З",
+    "И",
+    "Й",
+    "М",
+    "О",
+    "П",
+    "Р",
+    "С",
+    "Т",
+    "У",
+    "Ф",
+    "Х",
+    "Ц",
+    "Ч",
+    "Ш",
+    "Щ",
+    "Ь",
+    "Ю",
+    "Я",
+    "Ґ"
+  ],
+  "train_n": 19971,
+  "val_n": 4278,
+  "test_n": 4278,
+  "best_val_accuracy": 0.8838242292404175,
+  "test_accuracy": 0.8903693556785583,
+  "per_class": {
+    "А": {
+      "test_correct": 4,
+      "test_total": 4,
+      "train_n": 21
+    },
+    "Б": {
+      "test_correct": 290,
+      "test_total": 291,
+      "train_n": 1359
+    },
+    "В": {
+      "test_correct": 4,
+      "test_total": 4,
+      "train_n": 22
+    },
+    "Г": {
+      "test_correct": 387,
+      "test_total": 387,
+      "train_n": 1806
+    },
+    "Д": {
+      "test_correct": 53,
+      "test_total": 55,
+      "train_n": 259
+    },
+    "Е": {
+      "test_correct": 323,
+      "test_total": 324,
+      "train_n": 1509
+    },
+    "Ж": {
+      "test_correct": 399,
+      "test_total": 734,
+      "train_n": 3427
+    },
+    "З": {
+      "test_correct": 357,
+      "test_total": 362,
+      "train_n": 1686
+    },
+    "И": {
+      "test_correct": 7,
+      "test_total": 34,
+      "train_n": 162
+    },
+    "Й": {
+      "test_correct": 21,
+      "test_total": 34,
+      "train_n": 162
+    },
+    "М": {
+      "test_correct": 377,
+      "test_total": 378,
+      "train_n": 1762
+    },
+    "О": {
+      "test_correct": 5,
+      "test_total": 5,
+      "train_n": 23
+    },
+    "П": {
+      "test_correct": 372,
+      "test_total": 382,
+      "train_n": 1783
+    },
+    "Р": {
+      "test_correct": 328,
+      "test_total": 328,
+      "train_n": 1532
+    },
+    "С": {
+      "test_correct": 361,
+      "test_total": 369,
+      "train_n": 1719
+    },
+    "Т": {
+      "test_correct": 57,
+      "test_total": 57,
+      "train_n": 267
+    },
+    "У": {
+      "test_correct": 4,
+      "test_total": 4,
+      "train_n": 20
+    },
+    "Ф": {
+      "test_correct": 4,
+      "test_total": 4,
+      "train_n": 22
+    },
+    "Х": {
+      "test_correct": 333,
+      "test_total": 340,
+      "train_n": 1584
+    },
+    "Ц": {
+      "test_correct": 41,
+      "test_total": 42,
+      "train_n": 196
+    },
+    "Ч": {
+      "test_correct": 6,
+      "test_total": 7,
+      "train_n": 32
+    },
+    "Ш": {
+      "test_correct": 35,
+      "test_total": 42,
+      "train_n": 197
+    },
+    "Щ": {
+      "test_correct": 0,
+      "test_total": 42,
+      "train_n": 197
+    },
+    "Ь": {
+      "test_correct": 2,
+      "test_total": 2,
+      "train_n": 10
+    },
+    "Ю": {
+      "test_correct": 34,
+      "test_total": 42,
+      "train_n": 193
+    },
+    "Я": {
+      "test_correct": 4,
+      "test_total": 4,
+      "train_n": 16
+    },
+    "Ґ": {
+      "test_correct": 1,
+      "test_total": 1,
+      "train_n": 5
+    }
+  }
+}

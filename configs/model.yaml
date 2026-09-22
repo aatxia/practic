@@ -1,0 +1,31 @@
+# Model and feature configuration.
+#
+# Mirrors the same-named settings in .env (FEATURES_*, MODEL_*) -- .env is
+# what the running backend actually reads; this file is the reference for
+# ML experiments (Phase 9+: ml/training/train.py will load a variant of this
+# per experiment, see docs/architecture.md section 6 and master-prompt
+# section 31 "experiment tracking").
+
+camera:
+  fps: 12
+  width: 640
+  height: 480
+
+model:
+  type: lstm # lstm | transformer | video_jepa
+  sequence_length: 32
+
+features:
+  hands: true
+  pose: true
+  face: true
+
+# Phase 9: ml/training/train.py reads these as defaults; CLI flags
+# (--epochs, --hidden-size, ...) override them per-run without editing
+# this file (see ml/training/config.py).
+training:
+  hidden_size: 128
+  num_layers: 2
+  epochs: 20
+  batch_size: 16
+  learning_rate: 0.001

@@ -1,0 +1,1 @@
+export { SignToSpeech } from "./SignToSpeech";

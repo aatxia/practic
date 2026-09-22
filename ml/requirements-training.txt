@@ -1,0 +1,16 @@
+# Extra dependencies for ml/training/ (Phase 9+) on top of ml/requirements.txt.
+# Kept separate from ml/requirements.txt because torch has GPU/CPU-specific
+# wheels that the backend's CV pipeline (mediapipe/opencv, requirements.txt)
+# has no reason to force on every install.
+#
+# IMPORTANT for Google Colab: Colab ships a GPU-matched torch build
+# preinstalled. Do NOT `pip install -r` this whole file there -- it would
+# reinstall a generic (often CPU-only) torch over Colab's own and silently
+# lose GPU access. In Colab, install only:
+#     pip install pyyaml
+# Locally, install torch first per https://pytorch.org/get-started/locally/
+# (CPU or your CUDA version), then:
+#     pip install -r ml/requirements-training.txt
+-r requirements.txt
+torch>=2.4,<3.0
+pyyaml>=6.0,<7.0

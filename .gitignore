@@ -1,0 +1,49 @@
+
+!data/processed/.gitkeep
+!data/raw/.gitkeep
+!data/annotations/.gitkeep
+!data/splits/.gitkeep
+!models/checkpoints/.gitkeep
+# --- Docker ---
+# --- Env / secrets ---
+# --- MediaPipe pretrained models (downloaded, not trained by us) ---
+models/mediapipe/*.task
+# --- Node / Frontend ---
+# --- OS / editor ---
+# --- Python / Backend / ML ---
+*.ckpt
+*.egg-info/
+*.local
+*.onnx
+*.pt
+*.pth
+*.py[cod]
+*.safetensors
+.DS_Store
+.env
+.env.local
+.idea/
+.mypy_cache/
+.next/
+.pytest_cache/
+.ruff_cache/
+.turbo/
+.venv/
+.vscode/
+__pycache__/
+backend/.venv/
+data/processed/*
+data/raw/*
+data/annotations/*
+data/splits/*
+docker-compose.override.yml
+experiments/*/
+frontend/.next/
+frontend/node_modules/
+models/checkpoints/*
+node_modules/
+npm-debug.log*
+out/
+venv/
+*.tsbuildinfo
+frontend/next-env.d.ts

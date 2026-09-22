@@ -1,0 +1,29 @@
+# Backend imports ml/ directly (websocket/handler.py -> ml.preprocessing.landmarks,
+# app/services/lstm_inference_service.py -> ml.inference.recognizer), so it needs
+# the same CV/ML dependencies, plus torch to actually run a trained checkpoint
+# (Phase 9-10). See ml/requirements-training.txt for the Colab/GPU-wheel caveat
+# if you're setting this up in a notebook rather than a normal server deploy.
+#
+# Inlined rather than `-r ../ml/requirements.txt`: some deploy platforms'
+# Python builders (e.g. Vercel) parse requirements.txt in isolation per
+# service root and reject a -r include pointing outside it. Keep this in
+# sync with ml/requirements.txt by hand.
+numpy==2.5.3
+opencv-python-headless==5.0.0.93
+mediapipe==1.0.1
+torch>=2.4,<3.0
+
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+pydantic-settings==2.5.2
+python-dotenv==1.0.1
+websockets==13.1
+# Also the runtime HTTP client for the optional AI sentence-composition
+# fallback (app/services/ai_sentence_composer.py), not just testing --
+# FastAPI's TestClient already needed it either way.
+httpx==0.27.2
+
+# testing
+pytest==8.3.3
+pytest-asyncio==0.24.0
