@@ -25,10 +25,11 @@ jobs:
       - name: Download MediaPipe model bundles
         run: bash scripts/download_mediapipe_models.sh
 
-      # MediaPipe's Tasks C library dlopen()s libEGL at import time even for
-      # CPU-only inference -- not present on the default runner image.
+      # MediaPipe's Tasks C library dlopen()s the EGL/GLES/GL stack at
+      # import time even for CPU-only inference -- none of it present on
+      # the default runner image.
       - name: Install MediaPipe's system libraries
-        run: sudo apt-get update && sudo apt-get install -y libegl1
+        run: sudo apt-get update && sudo apt-get install -y libegl1 libgles2 libgl1
 
       - name: Install backend dependencies
         run: pip install -r backend/requirements.txt
@@ -56,10 +57,11 @@ jobs:
       - name: Download MediaPipe model bundles
         run: bash scripts/download_mediapipe_models.sh
 
-      # MediaPipe's Tasks C library dlopen()s libEGL at import time even for
-      # CPU-only inference -- not present on the default runner image.
+      # MediaPipe's Tasks C library dlopen()s the EGL/GLES/GL stack at
+      # import time even for CPU-only inference -- none of it present on
+      # the default runner image.
       - name: Install MediaPipe's system libraries
-        run: sudo apt-get update && sudo apt-get install -y libegl1
+        run: sudo apt-get update && sudo apt-get install -y libegl1 libgles2 libgl1
 
       - name: Install ML dependencies
         run: pip install -r ml/requirements-training.txt
